@@ -4,6 +4,7 @@ FROM php:5-apache
 RUN apt-get update \
     && apt-get install -y \
         git \
+        libpng12-dev \
         libxslt1-dev \
         php5-gd \
         ssmtp \
@@ -13,6 +14,7 @@ RUN apt-get update \
 
 # enable mysqli, xsl and zlib PHP modules
 RUN docker-php-ext-install \
+    gd \
     mysqli \
     xsl \
     zip
