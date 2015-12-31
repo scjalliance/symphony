@@ -5,6 +5,7 @@ RUN apt-get update \
     && apt-get install -y \
         git \
         libxslt1-dev \
+        php5-gd \
         ssmtp \
         zlib1g-dev \
     && apt-get clean \
